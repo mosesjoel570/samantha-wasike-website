@@ -1,9 +1,9 @@
 import FadeIn from "../ui/FadeIn";
 
 const stats = [
-  { number: "15+", title: "Years of Excellence" },
+  { number: "3+", title: "Years of Excellence" },
   { number: "10,000+", title: "Patients Served" },
-  { number: "24/7", title: "Emergency Care" },
+  { number: "Day", title: "Emergency Care" },
   { number: "98%", title: "Patient Satisfaction" }
 ];
 
