@@ -24,7 +24,7 @@ export default function Doctor() {
               />
             </div>
 
-            <Card className="rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl shadow-lg">
+            <Card className="border border-slate-100 shadow-lg">
 
               <h3 className="text-3xl font-bold text-blue-700">
                 Samantha Wasike
@@ -52,7 +52,7 @@ export default function Doctor() {
 
                 <div>&#10003; Wound Dressing</div>
 
-                <div>&#10003; Home-Based Nursing Care</div>
+                <div>&#10003; Social interaction</div>
 
                 <div>&#10003; Health Monitoring</div>
 
@@ -67,5 +67,4 @@ export default function Doctor() {
     </FadeIn>
   );
 }
-
 

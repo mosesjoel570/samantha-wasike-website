@@ -1,0 +1,27 @@
+[1mdiff --git a/src/components/home/Doctor.tsx b/src/components/home/Doctor.tsx[m
+[1mindex ced60c8..b69ff06 100644[m
+[1m--- a/src/components/home/Doctor.tsx[m
+[1m+++ b/src/components/home/Doctor.tsx[m
+[36m@@ -24,7 +24,7 @@[m [mexport default function Doctor() {[m
+               />[m
+             </div>[m
+ [m
+[31m-            <Card className="rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl shadow-lg">[m
+[32m+[m[32m            <Card className="border border-slate-100 shadow-lg">[m
+ [m
+               <h3 className="text-3xl font-bold text-blue-700">[m
+                 Samantha Wasike[m
+[36m@@ -52,7 +52,7 @@[m [mexport default function Doctor() {[m
+ [m
+                 <div>&#10003; Wound Dressing</div>[m
+ [m
+[31m-                <div>&#10003; Home-Based Nursing Care</div>[m
+[32m+[m[32m                <div>&#10003; Social interaction</div>[m
+ [m
+                 <div>&#10003; Health Monitoring</div>[m
+ [m
+[36m@@ -68,4 +68,3 @@[m [mexport default function Doctor() {[m
+   );[m
+ }[m
+ [m
+[31m-[m
