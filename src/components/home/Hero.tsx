@@ -63,7 +63,7 @@ Explore Services
 
 <div className="rounded-3xl bg-white/10 p-6 backdrop-blur">
 
-<h2 className="text-4xl font-bold text-blue-300">15+</h2>
+<h2 className="text-4xl font-bold text-blue-300">3+</h2>
 
 <p className="mt-2 text-slate-200">
 
@@ -87,7 +87,7 @@ Patients Assisted
 
 <div className="rounded-3xl bg-white/10 p-6 backdrop-blur">
 
-<h2 className="text-4xl font-bold text-blue-300">24/7</h2>
+<h2 className="text-4xl font-bold text-blue-300">Day </h2>
 
 <p className="mt-2 text-slate-200">
 
