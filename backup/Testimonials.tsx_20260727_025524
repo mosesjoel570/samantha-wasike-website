@@ -1,0 +1,99 @@
+
+import FadeIn from "../ui/FadeIn";
+import { Container, Card, SectionTitle } from "../ui";
+import { Star } from "lucide-react";
+
+const testimonials=[
+
+{
+name:"Patient A",
+message:"Excellent care from Dr. Samantha. The staff were professional, friendly and attentive throughout my visit."
+},
+
+{
+name:"Patient B",
+message:"A clean facility with outstanding medical services. I felt listened to and received quality treatment."
+},
+
+{
+name:"Patient C",
+message:"Booking an appointment was easy and the care I received exceeded my expectations."
+}
+
+];
+
+export default function Testimonials(){
+
+return(
+
+<FadeIn>
+
+<section
+id="testimonials"
+className="bg-white py-24"
+>
+
+<Container>
+
+<SectionTitle
+
+eyebrow="Testimonials"
+
+title="What Our Patients Say"
+
+subtitle="Real feedback from patients who trusted Dr. Samantha Hospital."
+
+/>
+
+<div className="grid gap-8 md:grid-cols-3">
+{testimonials.map((item)=>(
+
+<Card key={item.name}>
+
+<div className="flex text-yellow-500 mb-4">
+
+<Star className="h-5 w-5 fill-current"/>
+<Star className="h-5 w-5 fill-current"/>
+<Star className="h-5 w-5 fill-current"/>
+<Star className="h-5 w-5 fill-current"/>
+<Star className="h-5 w-5 fill-current"/>
+
+</div>
+
+<p className="leading-7 text-slate-600 italic">
+
+"{item.message}"
+
+</p>
+
+<div className="mt-8">
+
+<h3 className="font-bold text-lg text-slate-900">
+
+{item.name}
+
+</h3>
+
+<p className="text-blue-700">
+
+Verified Patient
+
+</p>
+
+</div>
+
+</Card>
+
+))}
+
+</div>
+
+</Container>
+
+</section>
+
+</FadeIn>
+
+);
+
+}

@@ -1,0 +1,139 @@
+Clear-Host
+
+Write-Host ""
+Write-Host "===============================================" -ForegroundColor Cyan
+Write-Host " HOSPITAL WEBSITE - PHASE 4E PACK 2B" -ForegroundColor Green
+Write-Host " Premium Footer Component" -ForegroundColor Green
+Write-Host "===============================================" -ForegroundColor Cyan
+Write-Host ""
+
+$Root = Get-Location
+
+$FooterFile = Join-Path $Root "src\components\layout\Footer\Footer.tsx"
+
+$Code = @'
+
+import { Heart, Phone, Mail, MapPin } from "lucide-react";
+
+export default function Footer() {
+
+  const year = new Date().getFullYear();
+
+  return (
+
+    <footer className="bg-slate-900 text-white">
+
+      <div className="mx-auto max-w-7xl px-6 py-16">
+
+        <div className="grid gap-10 md:grid-cols-3">
+
+          <div>
+
+            <h2 className="text-3xl font-bold text-cyan-400">
+              Dr. Samantha Hospital
+            </h2>
+
+            <p className="mt-4 text-slate-300 leading-7">
+              Compassionate, modern and patient-centered healthcare
+              delivered by experienced professionals.
+            </p>
+
+          </div>
+
+          <div>
+
+            <h3 className="mb-5 text-xl font-semibold">
+              Contact
+            </h3>
+
+            <div className="space-y-4">
+
+              <div className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-cyan-400" />
+                <span>+254 704 271129</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-cyan-400" />
+                <span>wasikesamantha03@gmail.com</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MapPin className="h-5 w-5 text-cyan-400" />
+                <span>Nairobi, Kenya</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <h3 className="mb-5 text-xl font-semibold">
+              Quick Links
+            </h3>
+
+            <div className="space-y-3">
+
+              <a href="#home" className="block hover:text-cyan-400">Home</a>
+              <a href="#about" className="block hover:text-cyan-400">About</a>
+              <a href="#services" className="block hover:text-cyan-400">Services</a>
+              <a href="#doctor" className="block hover:text-cyan-400">Doctor</a>
+              <a href="#gallery" className="block hover:text-cyan-400">Gallery</a>
+              <a href="#contact" className="block hover:text-cyan-400">Contact</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mt-12 border-t border-slate-700 pt-8 text-center">
+
+          <p className="flex items-center justify-center gap-2 text-slate-300">
+
+            Made with
+
+            <Heart className="h-5 w-5 text-red-500 fill-red-500" />
+
+            for better healthcare.
+
+          </p>
+
+          <p className="mt-4 text-sm text-slate-400">
+
+            Copyright © {year} Dr. Samantha Hospital. All Rights Reserved.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  );
+
+}
+
+'@
+
+[System.IO.File]::WriteAllText(
+    $FooterFile,
+    $Code,
+    [System.Text.UTF8Encoding]::new($false)
+)
+
+Write-Host "[OK] Footer.tsx generated." -ForegroundColor Green
+
+if (Test-Path $FooterFile) {
+    Write-Host "[OK] Validation passed." -ForegroundColor Green
+}
+
+Write-Host ""
+Write-Host "===============================================" -ForegroundColor Green
+Write-Host " PHASE 4E PACK 2B COMPLETED" -ForegroundColor Green
+Write-Host "===============================================" -ForegroundColor Green
+Write-Host ""
+Write-Host "Phase 4E COMPLETE."
+Write-Host "Next: Phase 5A - Premium Animations & Scroll Effects"

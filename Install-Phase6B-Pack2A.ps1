@@ -1,0 +1,120 @@
+Clear-Host
+
+Write-Host ""
+Write-Host "===============================================" -ForegroundColor Cyan
+Write-Host " HOSPITAL WEBSITE - PHASE 6B PACK 2A" -ForegroundColor Green
+Write-Host " Responsive Layout & UI Polish" -ForegroundColor Green
+Write-Host "===============================================" -ForegroundColor Cyan
+Write-Host ""
+
+$Root = Get-Location
+
+$CssFile = Join-Path $Root "src\index.css"
+
+$Css = @'
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+.dark body{
+  @apply bg-slate-900 text-slate-100;
+}
+
+section{
+  @apply py-24;
+}
+
+img{
+  @apply max-w-full h-auto rounded-2xl;
+}
+
+.container{
+  @apply mx-auto max-w-7xl px-6;
+}
+
+.card-hover{
+  @apply transition duration-300 hover:-translate-y-2 hover:shadow-2xl;
+}
+
+.btn-primary{
+  @apply rounded-xl bg-blue-700 px-6 py-3 font-semibold text-white transition hover:bg-blue-800;
+}
+
+.btn-outline{
+  @apply rounded-xl border-2 border-blue-700 px-6 py-3 font-semibold text-blue-700 transition hover:bg-blue-700 hover:text-white;
+}
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#2563eb;
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+  background:#e5e7eb;
+}
+
+@media(max-width:1024px){
+
+h1{
+font-size:3rem;
+}
+
+h2{
+font-size:2.4rem;
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+padding-top:5rem;
+padding-bottom:5rem;
+}
+
+.container{
+padding-left:1.5rem;
+padding-right:1.5rem;
+}
+
+}
+
+@media(max-width:640px){
+
+h1{
+font-size:2.4rem;
+}
+
+h2{
+font-size:2rem;
+}
+
+}
+'@
+
+[System.IO.File]::WriteAllText(
+    $CssFile,
+    $Css,
+    [System.Text.UTF8Encoding]::new($false)
+)
+
+Write-Host "[OK] index.css optimized." -ForegroundColor Green
+
+Write-Host ""
+Write-Host "===============================================" -ForegroundColor Green
+Write-Host " PHASE 6B PACK 2A COMPLETED" -ForegroundColor Green
+Write-Host "===============================================" -ForegroundColor Green
+Write-Host ""
+Write-Host "Next: Pack 2B - Final Premium UI Enhancement"
