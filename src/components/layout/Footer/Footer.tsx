@@ -72,7 +72,7 @@ Contact
 
 <p>&#9993; wasikesamantha03@gmail.com</p>
 
-<p>&#128205; Nairobi, Kenya</p>
+<p>&#128205; Mtwapa, Kilifi</p>
 
 </div>
 
